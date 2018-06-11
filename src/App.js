@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import List from './List'; 
+import TodoForm from './TodoForm';
 
 class App extends Component {
   state = {
@@ -15,7 +16,10 @@ class App extends Component {
     const { todos } = this.state
 
     return (
-      <List name="Todo List" items= {todos}/>
+      <div>
+        <TodoForm />
+        <List name="Todo List" items= {todos}/>
+      </div>
     );
   }
 }
